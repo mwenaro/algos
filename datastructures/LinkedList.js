@@ -7,9 +7,23 @@ this.value=value;
 
 }
 
-let n1=new Node(20)
-let n2 = new Node(32,n1)
+class LinkedList{
+ constructor(head=null){this.head=head}
+ addHead(value){
+	 
+let newNode = new Node(value)
+	 if(this.head) newNode.next=this.head;
+	 
+  this.head=newNode;
+ }
+ 
 
-console.log(' n1 . ', n1)
-console.log(' n2 , ',n2)
+}
+
+let ll = new LinkedList()
+     ll.addHead(200)
+     ll.addHead(150)
+
+console.log(ll)
+
 
